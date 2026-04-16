@@ -5,82 +5,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
     <title>Aegis Bank</title>
 </head>
 
 <body>
+
     <!-- HEADER -->
-   <header>
-     <nav class="navbar">
+    <header>
+        <nav class="navbar">
+
+            <!-- nav-left : burger (mobile) | logo (desktop) -->
             <div class="nav-left">
-                <!-- Menu burger -->
-                <button class="header_burger" aria-label="Ouvrir le menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="icon">
+                <button class="header_burger mobile-only" aria-label="Ouvrir le menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path fill="currentColor"
                             d="M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m1 5a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2z" />
                     </svg>
                 </button>
+                <a href="index.html" class="header_logo desktop-only">AEGIS BANK</a>
             </div>
+
+            <!-- nav-center : logo (mobile) | liens (desktop) -->
             <div class="nav-center">
-                <h1 class="uppercase-text bold-text">
-                    <a href="index.html" class="header_logo">AEGIS BANK</a>
-                </h1>
+                <a href="index.html" class="header_logo mobile-only">AEGIS BANK</a>
+                <ul class="nav-links desktop-only">
+                    <li><a href="#">Solutions Streamers</a></li>
+                    <li><a href="#">Financement Créatifs</a></li>
+                    <li><a href="#">Écosystème Pro</a></li>
+                </ul>
             </div>
+
+            <!-- nav-right : icône user (mobile) | boutons auth (desktop) -->
             <div class="nav-right">
-                <div class="user-icon">
-                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                   <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                   </svg>
+                <div class="user-icon mobile-only" aria-label="Mon compte">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                    </svg>
+                </div>
+                <div class="nav-auth desktop-only">
+                    <a href="/" class="nav-btn-login">Se connecter</a>
+                    <a href="/" class="nav-btn-signup">S'inscrire</a>
+                </div>
+            </div>
 
-                </div>
-            </div>
         </nav>
-                </div>
-            </div>
-        </nav>
-   </header>
-   
-    <!-- MAIN --> 
+    </header>
+
+    <!-- MAIN -->
     <main>
+
         <!-- Hero Section -->
-        <div class="hero">
-            <h1 class="hero_title">
-                La néobanque éthique & transparente
-            </h1>
-
-            <h2 class="hero_subtitle">
-                Gérez votre argent devient aussi simple que créer vos contenus.
-            </h2>
-        </div>
-
-        <!-- Boutons de connexion -->
-        <div class="block_connect">
-            <a href="/" class="connect_signup">S'inscrire</a>
-            <span class="connect_sep">ou</span>
-            <a href="/" class="connect_login">Se connecter</a>
-        </div>
+        <section class="hero">
+            <span class="hero_live">● LIVE</span>
+            <h1 class="hero_title">La néobanque éthique<br>&amp; transparente</h1>
+            <p class="hero_subtitle">Gérez votre argent aussi simplement que vous créez vos contenus.</p>
+            <a href="/" class="hero_cta mobile-only">Créer mon compte</a>
+        </section>
 
         <!-- Promo Card Section -->
         <section class="promo_card">
-            <h2 class="card_title">20€ offerts – Mars 2026</h2>
-            <div class="promo_action">
-                <a href="#" class="download-btn-card">
-                    Télécharger l'app !
-                </a>
+            <div class="promo_card_inner">
+                <div class="promo_card_text">
+                    <span class="promo_tag">Offre exclusive</span>
+                    <h2 class="card_title">20€ offerts<br>– Mars 2026</h2>
+                    <p class="card_desc">Crée ton compte Aegis Bank et reçois 20€ directement sur ton solde dès ta première transaction.</p>
+                </div>
+                <div class="promo_action">
+                    <a href="#" class="download-btn-card">Télécharger l'app</a>
+                    <span class="promo_sub">Disponible iOS &amp; Android · Gratuit</span>
+                </div>
             </div>
         </section>
 
-        
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
-
-        <a href="/"> Politique de confidentialité & Mentions légales</a>
+        <a href="/" class="footer_legal">Politique de confidentialité &amp; Mentions légales</a>
 
         <div class="logos-partner">
-            <a href="/"> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
-                    <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <a href="/" aria-label="Telegram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                         <path stroke-dasharray="18" d="M21 5l-2.5 15M21 5l-12 8.5">
                             <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="18;0" />
                         </path>
@@ -97,30 +105,29 @@
                             <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.3s" to="0" />
                         </path>
                     </g>
-                </svg></a>
-            <a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
-                    <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                        <path stroke-dasharray="82"
-                            d="M15.5 21.5c-10.5 2.5 -12.5 -2.5 -12.5 -8.5v-3c0 -6 2.5 -7 7 -7h4c4.5 0 7 1.5 7 5.5v4c0 6.5 -10 4 -13.5 4c-1 0 -1.5 7 8 5Z">
+                </svg>
+            </a>
+            <a href="/" aria-label="Bluesky">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path stroke-dasharray="82" d="M15.5 21.5c-10.5 2.5 -12.5 -2.5 -12.5 -8.5v-3c0 -6 2.5 -7 7 -7h4c4.5 0 7 1.5 7 5.5v4c0 6.5 -10 4 -13.5 4c-1 0 -1.5 7 8 5Z">
                             <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="82;0" />
                         </path>
-                        <path stroke-dasharray="32" stroke-dashoffset="32"
-                            d="M7 13.5l0 -5.5c0 0 0.5 -2 2.5 -2c2 0 2.5 2 2.5 2l0 2.5l0 -2.5c0 0 0.5 -2 2.5 -2c2 0 2.5 2 2.5 2l0 5.5">
+                        <path stroke-dasharray="32" stroke-dashoffset="32" d="M7 13.5l0 -5.5c0 0 0.5 -2 2.5 -2c2 0 2.5 2 2.5 2l0 2.5l0 -2.5c0 0 0.5 -2 2.5 -2c2 0 2.5 2 2.5 2l0 5.5">
                             <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.6s" to="0" />
                         </path>
                     </g>
-                </svg></a>
-            <a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
-                    <path fill="none" stroke="#fff" stroke-dasharray="76" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M7.47 5.94c1.83 1.37 3.81 4.14 4.53 5.63c0.72 -1.49 2.7 -4.26 4.53 -5.63c1.33 -0.99 3.47 -1.75 3.47 0.68c0 0.49 -0.28 4.08 -0.45 4.66c-0.57 2.03 -2.65 2.55 -4.5 2.23c3.24 0.55 4.06 2.36 2.28 4.17c-3.38 3.44 -4.85 -0.87 -5.23 -1.97c-0.07 -0.2 -0.1 -0.3 -0.1 -0.22c-0 -0.08 -0.03 0.02 -0.1 0.22c-0.38 1.1 -1.86 5.41 -5.23 1.97c-1.78 -1.81 -0.96 -3.63 2.28 -4.17c-1.85 0.31 -3.93 -0.21 -4.5 -2.23c-0.17 -0.58 -0.45 -4.18 -0.45 -4.66c0 -2.43 2.14 -1.67 3.47 -0.68Z">
+                </svg>
+            </a>
+            <a href="/" aria-label="Mastodon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-dasharray="76" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.47 5.94c1.83 1.37 3.81 4.14 4.53 5.63c0.72 -1.49 2.7 -4.26 4.53 -5.63c1.33 -0.99 3.47 -1.75 3.47 0.68c0 0.49 -0.28 4.08 -0.45 4.66c-0.57 2.03 -2.65 2.55 -4.5 2.23c3.24 0.55 4.06 2.36 2.28 4.17c-3.38 3.44 -4.85 -0.87 -5.23 -1.97c-0.07 -0.2 -0.1 -0.3 -0.1 -0.22c-0 -0.08 -0.03 0.02 -0.1 0.22c-0.38 1.1 -1.86 5.41 -5.23 1.97c-1.78 -1.81 -0.96 -3.63 2.28 -4.17c-1.85 0.31 -3.93 -0.21 -4.5 -2.23c-0.17 -0.58 -0.45 -4.18 -0.45 -4.66c0 -2.43 2.14 -1.67 3.47 -0.68Z">
                         <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="76;0" />
                     </path>
-                </svg></a>
+                </svg>
+            </a>
         </div>
-
     </footer>
 
 </body>
-
 </html>
